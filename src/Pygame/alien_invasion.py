@@ -21,20 +21,19 @@ def run_game():
     #创建一艘飞船
     
     screen = pygame.display.set_mode((1200,800))
-    ship = Ship(screen)
+    ship = Ship(ai_settings,screen)
     
     #设置背景色
-    
-    bg_color = (230,230,230)
+
+    bg_color= (230,230,230)
     
     
     #开始游戏的主循环
     while True:
         #调用gf中的函数
         gf.check_events(ship)
+        ship.update()
         gf.update_screen(ai_settings, screen, ship)
        
         
 run_game()
-               
-    
