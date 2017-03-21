@@ -31,7 +31,7 @@ def run_game():
     #开始游戏的主循环
     while True:
         #调用gf中的函数
-        gf.check_events()  
+        gf.check_events(ship)
         gf.update_screen(ai_settings, screen, ship)
        
         
